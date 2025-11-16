@@ -6,8 +6,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 LABEL github_repo="github.com/aaroncnb/LAM.git"
 
-RUN pip install torchvision==0.18.0 torchaudio==2.3.0 --index-url https://download.pytorch.org/whl/cu121
-pip install -U xformers==0.0.26.post1 --index-url https://download.pytorch.org/whl/cu121
+RUN pip install torchvision==0.18.0 torchaudio==2.3.0 --index-url https://download.pytorch.org/whl/cu121 \
+&& pip install -U xformers==0.0.26.post1 --index-url https://download.pytorch.org/whl/cu121
 
 WORKDIR /workspace
 
